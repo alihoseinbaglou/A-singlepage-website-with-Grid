@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 15% auto auto-fit;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo navbar";
+  background-color: #3b5367;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 500;
+}
+
+.logo {
+  padding: 0.5em;
+}
+
+.logo .fab {
+  color: aqua;
+}
+
+.logo a:hover {
+  opacity: 60%;
+}
+
+.selected {
+  border-bottom: aqua 2px solid;
+}
+
+.header .navbar nav a {
+  color: aqua;
+  font-weight: bold;
+  padding: 20px;
+  padding-bottom: 0.5em;
+}
+
+.header .navbar nav a:hover {
+  color: azure;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #183153;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  margin-top: 50px;
+  overflow: auto;
+}
+
+.main {
+  grid-area: main;
+  margin-top: 60px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+}
+
+.navbar {
+  grid-area: navbar;
+  justify-self: end;
+  align-self: center;
+  margin-right: 10rem;
+}
+
+.sidebar .singer-list h2 {
+  color: azure;
+  padding: 1em;
+}
+
+.sidebar .singer-list {
+  text-align: center;
+}
+
+.sidebar .singer-list ul {
+  list-style-type: none;
+  display: inline;
+}
+
+.sidebar .singer-list ul li {
+  padding: 1em;
+}
+
+.sidebar .singer-list ul li a {
+  color: orangered;
+  opacity: 70%;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.sidebar .singer-list ul li a:hover {
+  font-weight: bold;
+  opacity: 100%;
+}
+
+.divider {
+  margin: 0 auto;
+  width: 80%;
+  padding: 2em;
+}
+
+.divider span {
+  font-weight: lighter;
+}
+
+.divider {
+  line-height: 1.8;
+  background-color: #ffffff;
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
+#wr1:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr2:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr3:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr4:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr5:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr6:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr7:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr8:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr9:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr10:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr11:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr12:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr13:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+#wr14:target {
+  padding-top: 70px;
+  background-color: #f5d442;
+}
+
+.topic {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.wrapper1 {
+  margin-top: 1em;
+}
+
+.singer-img {
+  text-align: center;
+  padding: 1em;
+}
+
+.singer-img img {
+  border-radius: 50%;
+}
+
+.singer-img img:hover {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer {
+  background-color: #3b5367;
+  margin-top: 1em;
+}
+
+.footer p {
+  color: #ffffff;
+  text-align: center;
+  padding: 2em;
+  margin-left: 17em;
+}
+
+.footer .social-media {
+  text-align: center;
+  padding: 0.5em;
+  padding-top: 10px;
+  margin-left: 17em;
+}
+
+.footer .social-media a {
+  color: aqua;
+  padding: 0.5em;
+}
+
+.footer .social-media a:hover {
+  color: azure;
+  border-bottom: azure 2px solid;
+}
+
+.footer .social-media .fab {
+  font-size: 2em;
+}
+
+.social-media .copyright p {
+  padding-right: 18em;
+}
+
+/* defining media querries */
+@media only screen and (max-width: 930px) {
+  .wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 65px auto auto auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+
+  .header {
+    position: static;
+  }
+
+  .header .logo {
+    display: none;
+  }
+
+  .main {
+    margin-top: 0.5em;
+  }
+
+  .sidebar {
+    position: static;
+    overflow: hidden;
+    height: 850px;
+  }
+
+  .footer {
+    display: block;
+    background-color: #ffffff;
+  }
+
+  .social-media {
+    display: inline;
+
+    margin-top: 10em !important;
+  }
+
+  .copyright p {
+    color: black;
+  }
+}
